@@ -1,0 +1,14 @@
+{
+  "pathParameters": {
+    "id": "replace-with-task-id"
+  },
+  "requestContext": {
+    "requestId": "local-update",
+    "authorizer": {
+      "claims": {
+        "sub": "local-user-id"
+      }
+    }
+  },
+  "body": "{\"title\":\"Updated task\",\"priority\":\"medium\",\"status\":\"done\"}"
+}

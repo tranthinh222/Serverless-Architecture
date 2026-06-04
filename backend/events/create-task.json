@@ -1,0 +1,11 @@
+{
+  "requestContext": {
+    "requestId": "local-create",
+    "authorizer": {
+      "claims": {
+        "sub": "local-user-id"
+      }
+    }
+  },
+  "body": "{\"title\":\"Study AWS Serverless\",\"description\":\"Build Task Manager backend\",\"priority\":\"high\",\"dueDate\":\"2025-06-15\",\"status\":\"pending\"}"
+}

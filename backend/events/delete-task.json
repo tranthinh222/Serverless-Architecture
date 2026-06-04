@@ -1,0 +1,13 @@
+{
+  "pathParameters": {
+    "id": "replace-with-task-id"
+  },
+  "requestContext": {
+    "requestId": "local-delete",
+    "authorizer": {
+      "claims": {
+        "sub": "local-user-id"
+      }
+    }
+  }
+}

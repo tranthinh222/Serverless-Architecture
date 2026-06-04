@@ -1,0 +1,10 @@
+{
+  "requestContext": {
+    "requestId": "local-get",
+    "authorizer": {
+      "claims": {
+        "sub": "local-user-id"
+      }
+    }
+  }
+}

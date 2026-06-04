@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Task Manager</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <h2>CloudTask</h2>
+      <nav>
+        <a href="#dashboard" data-nav="dashboard" class="active">Dashboard</a>
+        <a href="#tasks" data-nav="tasks">Tasks</a>
+        <a href="#settings" data-nav="settings">Settings</a>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header class="topbar" id="dashboard">
+        <div>
+          <h1>Task Dashboard</h1>
+          <p class="muted">Manage your serverless tasks</p>
+        </div>
+
+        <div class="top-actions">
+          <button id="openCreateModal" class="btn-primary">+ New Task</button>
+          <button id="logoutBtn" class="btn-outline">Logout</button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card">
+          <span>Total</span>
+          <strong id="totalTasks">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Pending</span>
+          <strong id="pendingTasks">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Done</span>
+          <strong id="doneTasks">0</strong>
+        </div>
+      </section>
+
+      <section class="panel" id="tasks">
+        <div class="filters">
+          <select id="priorityFilter">
+            <option value="">All priorities</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <input id="dueDateFilter" type="date" />
+
+          <button id="clearFilters" class="btn-outline">Clear</button>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+      </section>
+
+      <section class="panel hidden" id="settings">
+        <h2>Settings</h2>
+        <p class="muted">Settings will be available after AWS deployment.</p>
+      </section>
+    </main>
+
+    <div id="taskModal" class="modal hidden"></div>
+    <div id="toast"></div>
+    <div id="spinner" class="spinner hidden"></div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../components/taskModal.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
